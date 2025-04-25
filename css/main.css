@@ -1,0 +1,149 @@
+/* Base styles */
+:root {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --accent-color: #ffffff;
+  --border-color: #333333;
+  --hover-color: #ffffff;
+  --glow-color: #6e11f3;
+  --secondary-glow: #11b7f3;
+  --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-code: 'Fira Code', 'Consolas', monospace;
+  
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  
+  --border-radius: 0;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: 4rem;
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--text-color);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.8;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  position: relative;
+  background: transparent;
+  color: var(--text-color);
+  border-right: 2px solid var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+}
+
+.primary-btn {
+  background: var(--text-color);
+  color: var(--background-color);
+}
+
+.primary-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 var(--text-color);
+}
+
+.secondary-btn {
+  margin-left: var(--spacing-md);
+}
+
+.secondary-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 2px 2px 0 var(--text-color);
+}
+
+/* Section spacing */
+section {
+  padding: var(--spacing-xl) 0;
+  position: relative;
+}
+
+/* Accent elements */
+.accent-dot {
+  color: var(--glow-color);
+}
